@@ -48,7 +48,7 @@ public class PolicyCreator {
                 System.out.println("File Added : " + file);
                 ZipEntry ze = new ZipEntry(file);
                 zos.putNextEntry(ze);
-                try (FileInputStream in = new FileInputStream(SOURCE_FOLDER + File.separator + file)) {
+                try (FileInputStream in = new FileInputStream(source + File.separator + file)) {
                     int len;
                     while ((len = in.read(buffer)) > 0) {
                         zos.write(buffer, 0, len);
